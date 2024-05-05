@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "server:local": "tsc  && nodemon ./dist/app.js",
-    "server:online": "SET NODE_ENV=production && tsc && nodemon ./dist/app.js",
+    "server:local": "SET NODE_ENV=development && tsc  && nodemon ./dist/app.js",
+    "server:online": "tsc && nodemon ./dist/app.js",
     "build": "tsc"
   },
   "dependencies": {
