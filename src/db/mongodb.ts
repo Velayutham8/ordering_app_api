@@ -7,15 +7,16 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-let url: string;
+let url: string =
+  'mongodb+srv://Velayuthamwd:YacAF3ctXYURXm9b@foodorderingapp.1zm14hp.mongodb.net/';
 
-console.warn('process.env', process.env['NODE_ENV']);
+// console.warn('process.env', process.env['NODE_ENV']);
 
-if (process.env['NODE_ENV']?.trim() === 'production') {
-  url = process.env['PRODUCTION_MONGO_URL'] as string;
-} else {
-  url = process.env['MONGO_URL'] as string;
-}
+// if (process.env['NODE_ENV']?.trim() === 'production') {
+//   url = process.env['PRODUCTION_MONGO_URL'] as string;
+// } else {
+//   url = process.env['MONGO_URL'] as string;
+// }
 // console.log('url', process.env);
 
 const client = new MongoClient(url);
