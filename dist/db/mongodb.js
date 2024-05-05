@@ -12,21 +12,19 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
-var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getMongodb = void 0;
 // const { MongoClient } = require('mongodb');
 const mongodb_1 = require("mongodb");
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
-let url;
-console.warn('process.env', process.env['NODE_ENV']);
-if (((_a = process.env['NODE_ENV']) === null || _a === void 0 ? void 0 : _a.trim()) === 'production') {
-    url = process.env['PRODUCTION_MONGO_URL'];
-}
-else {
-    url = process.env['MONGO_URL'];
-}
+let url = 'mongodb+srv://Velayuthamwd:YacAF3ctXYURXm9b@foodorderingapp.1zm14hp.mongodb.net/';
+// console.warn('process.env', process.env['NODE_ENV']);
+// if (process.env['NODE_ENV']?.trim() === 'production') {
+//   url = process.env['PRODUCTION_MONGO_URL'] as string;
+// } else {
+//   url = process.env['MONGO_URL'] as string;
+// }
 // console.log('url', process.env);
 const client = new mongodb_1.MongoClient(url);
 const getMongodb = () => __awaiter(void 0, void 0, void 0, function* () {
