@@ -2,7 +2,7 @@
   "scripts": {
     "server:local": "tsc  && nodemon ./dist/app.js",
     "server:online": "SET NODE_ENV=production && tsc && nodemon ./dist/app.js",
-    "build": "tsc"
+    "build": "tsc && npm i --save"
   },
   "dependencies": {
     "cors": "^2.8.5",
